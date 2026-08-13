@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "LayGrotesk";
+  src: url("/assets/fonts/LayGrotesk-Medium.woff") format("woff");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Teodor";
+  src: url("/assets/fonts/Teodor-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Teodor";
+  src: url("/assets/fonts/Teodor-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #fdfbf9;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f5f2ed;
+  --bg-inset: #eae5de;
+  --fg: #2d2a26;
+  --fg-muted: #736b63;
+  --fg-faint: #aba398;
+  --accent: #ed4857;
+  --accent-hover: #fa5565;
+  --accent-soft: rgba(237, 72, 87, 0.08);
+  --border: rgba(45, 42, 38, 0.06);
+  --border-strong: rgba(45, 42, 38, 0.18);
+  --archive-paper: #f1eeec;
+  --archive-ink: #1d0404;
+  --archive-line: #d5cccb;
+  --archive-bg: #fffdfb;
+  --archive-soft: #f1eeec;
+  --archive-control: rgba(241, 238, 236, 0.9);
+  --creative-bg: #fffdfb;
+  --creative-ink: #292522;
+  --about-bg: #fffdfb;
+  --about-ink: #292522;
+  --nav-surface: #f6f2ed;
+  --nav-ink: #49423c;
+  --nav-active-bg: #83565d;
+  --nav-active-ink: #fffaf6;
+  --nav-border: rgba(73, 66, 60, 0.2);
+  --shadow-sm: 0 2px 8px rgba(45, 42, 38, 0.04);
+  --shadow-md: 0 8px 24px rgba(45, 42, 38, 0.06);
+  --shadow-lg: 0 16px 48px rgba(45, 42, 38, 0.08);
+  --glass: rgba(253, 251, 249, 0.72);
+  --radius: 24px;
+  --font-lay: "LayGrotesk", Arial, sans-serif;
+  --font-teodor: "Teodor", Georgia, serif;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1f1d1b;
+  --bg-elevated: #292624;
+  --bg-subtle: #34302d;
+  --bg-inset: #403b37;
+  --fg: #eee9e3;
+  --fg-muted: #b9b0a7;
+  --fg-faint: #898178;
+  --accent: #f17883;
+  --accent-hover: #fa8c96;
+  --accent-soft: rgba(255, 94, 109, 0.12);
+  --border: rgba(245, 240, 235, 0.08);
+  --border-strong: rgba(245, 240, 235, 0.2);
+  --archive-paper: #292523;
+  --archive-ink: #eee7df;
+  --archive-line: #57504b;
+  --archive-bg: #211f1d;
+  --archive-soft: #2c2825;
+  --archive-control: rgba(44, 40, 37, 0.92);
+  --creative-bg: #23211f;
+  --creative-ink: #eee8e1;
+  --about-bg: #252321;
+  --about-ink: #eee8e1;
+  --nav-surface: #2b2825;
+  --nav-ink: #ded7cf;
+  --nav-active-bg: #c47d86;
+  --nav-active-ink: #211e1c;
+  --nav-border: rgba(222, 215, 207, 0.18);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --glass: rgba(28, 26, 25, 0.72);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #1f1d1b;
+    --bg-elevated: #292624;
+    --bg-subtle: #34302d;
+    --bg-inset: #403b37;
+    --fg: #eee9e3;
+    --fg-muted: #b9b0a7;
+    --fg-faint: #898178;
+    --accent: #f17883;
+    --accent-hover: #fa8c96;
+    --accent-soft: rgba(255, 94, 109, 0.12);
+    --border: rgba(245, 240, 235, 0.08);
+    --border-strong: rgba(245, 240, 235, 0.2);
+    --archive-paper: #292523;
+    --archive-ink: #eee7df;
+    --archive-line: #57504b;
+    --archive-bg: #211f1d;
+    --archive-soft: #2c2825;
+    --archive-control: rgba(44, 40, 37, 0.92);
+    --creative-bg: #23211f;
+    --creative-ink: #eee8e1;
+    --about-bg: #252321;
+    --about-ink: #eee8e1;
+    --nav-surface: #2b2825;
+    --nav-ink: #ded7cf;
+    --nav-active-bg: #c47d86;
+    --nav-active-ink: #211e1c;
+    --nav-border: rgba(222, 215, 207, 0.18);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+    --glass: rgba(28, 26, 25, 0.72);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0;
+  transition: background 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100dvh;
+  margin: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+video {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.portal-shell,
+.portal-shell > [data-page-root] {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.portal-shell {
+  background: var(--bg);
+  color: var(--fg);
+  transition: background-color 420ms ease, color 420ms ease;
+}
+
+.portal-shell[data-portal-stage="creative"],
+.portal-shell[data-portal-stage="archive"],
+.portal-shell[data-portal-stage="about"] {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.portal-brand {
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.portal-brand-mascot {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+.portal-brand-wordmark {
+  display: block;
+  width: 70px;
+  height: 10px;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+@media (max-width: 639px) {
+  .portal-brand {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .portal-shell[data-portal-stage="archive"] .portal-brand {
+    top: 12px !important;
+    left: 12px !important;
+  }
+
+  .portal-shell[data-portal-stage="archive"] .portal-brand-mascot {
+    width: 26px;
+    height: 26px;
+  }
+
+  .portal-shell[data-portal-stage="archive"] .portal-brand-wordmark {
+    width: 58px;
+    height: 9px;
+  }
+
+  .portal-shell[data-portal-stage="archive"] nav[aria-label="全局门户导航"] {
+    top: 12px !important;
+    right: 12px !important;
+  }
+
+  .portal-shell[data-portal-stage="archive"] nav[aria-label="全局门户导航"] > button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .portal-shell[data-portal-stage="archive"] button[aria-label^="切换到"] {
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+}
+
+@media (max-width: 340px) {
+  .portal-shell[data-portal-stage="archive"] .portal-brand-wordmark {
+    display: none;
+  }
+}
+
+.portal-next-stage {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px 0;
+  color: #fff;
+  background: transparent;
+  font-family: var(--font-lay);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  mix-blend-mode: exclusion;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.portal-next-stage i {
+  display: block;
+  width: 1px;
+  height: 22px;
+  background: currentColor;
+  animation: portal-next-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes portal-next-pulse {
+  0%, 100% { transform: scaleY(.45); transform-origin: top; opacity: .5; }
+  50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal-next-stage i { animation: none; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-breathe { animation: breathe 3s ease-in-out infinite; }
+.animate-float { animation: float-gentle 4s ease-in-out infinite; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+
+.portal-view {
+  min-height: 100svh;
+}
+
+.archive-mono {
+  font-family: "Fira Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: 0;
+}
+
+.archive-mincho {
+  font-family: "Shippori Mincho", "Songti SC", "SimSun", serif;
+  letter-spacing: 0;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-inset: var(--bg-inset);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+}

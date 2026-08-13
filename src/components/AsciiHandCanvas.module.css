@@ -1,0 +1,14 @@
+.canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
