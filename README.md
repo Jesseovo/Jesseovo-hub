@@ -22,7 +22,7 @@ Jesse-hub 不是一张把关键词排满的名片，更像一间可以慢慢逛�
 ## 逛逛 / 联系
 
 - [GitHub](https://github.com/Jesseovo)
-- [在线访问 Jesse-hub](https://github.com/Jesseovo/Jesseovo-hub)
+- [在线访问 Jesse-hub](https://jesseovo.qzz.io/)
 - Gmail：Jesseovo1219@gmail.com
 - QQ Mail：2953825993@qq.com
 - WeChat：CHITING0_0
